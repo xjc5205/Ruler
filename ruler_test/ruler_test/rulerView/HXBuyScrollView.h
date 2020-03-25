@@ -15,5 +15,8 @@
 
 @interface HXBuyScrollView : UIScrollView
 @property(nonatomic,strong)UICollectionView * hxCollectionView;
+
 - (void)createScorll:(NSString *)minString andMax:(NSString *)maxString defaultOffset:(NSString *)offset;
+
 @end
+

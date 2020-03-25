@@ -18,8 +18,8 @@
 @property(nonatomic,strong)UIScrollView * hxScrollView;
 @property(nonatomic,assign)float minX;
 @property(nonatomic,assign)NSString * defaultOffset;
-@property(nonatomic,strong)UIImageView *lineLable3;
-@property(nonatomic,strong)UIImageView *lineLable4;
+@property(nonatomic,strong)UIImageView *lineLable1;
+@property(nonatomic,strong)UIImageView *lineLable2;
 
 @end
 
@@ -27,22 +27,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
+
     //动态创建刻录尺
     [self.scrollView createScorll:@"0" andMax:@"50000" defaultOffset:_defaultOffset];
     
     //中点标识线
-    _lineLable3 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2.0, defaultY, 1, 50)];
-    _lineLable3.backgroundColor = [UIColor colorWithHex:0xff8f10];
-    [self.view addSubview:_lineLable3];
+    _lineLable1 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2.0, defaultY, 1, 50)];
+    _lineLable1.backgroundColor = [UIColor colorWithHex:0xff8f10];
+    [self.view addSubview:_lineLable1];
     
     //底部线条
-    _lineLable4 = [[UIImageView alloc] initWithFrame:CGRectMake(15, defaultY + 49.5, SCREEN_WIDTH-30, 0.5)];
-    _lineLable4.backgroundColor = [UIColor colorWithHex:0xcccccc];
-    [self.view addSubview:_lineLable4];
+    _lineLable2 = [[UIImageView alloc] initWithFrame:CGRectMake(15, defaultY + 49.5, SCREEN_WIDTH-30, 0.5)];
+    _lineLable2.backgroundColor = [UIColor colorWithHex:0xcccccc];
+    [self.view addSubview:_lineLable2];
     
+    //文本输入框
     _inputTextField = [[UITextField alloc]init];
     _inputTextField.frame = CGRectMake(15, defaultY - 64, SCREEN_WIDTH - 30, 44);
     _inputTextField.text = _defaultOffset;
@@ -50,20 +49,21 @@
     _inputTextField.textColor = [UIColor colorWithHex:0xff8f10];
     _inputTextField.font = [UIFont systemFontOfSize:21];
     [self.view addSubview:_inputTextField];
-    
-    
     self.inputTextField.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange:) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 -(HXBuyScrollView *)scrollView{
     
-    _scrollView = [[HXBuyScrollView alloc] initWithFrame:CGRectMake(15, defaultY, SCREEN_WIDTH-30, 50)];
-    _hxScrollView =_scrollView.hxCollectionView;
-    _hxScrollView.delegate = self;
-    _minX = 0;
-    _defaultOffset = @"10000";
-    [self.view addSubview:_scrollView];
+    if (!_scrollView) {
+        
+        _scrollView = [[HXBuyScrollView alloc] initWithFrame:CGRectMake(15, defaultY, SCREEN_WIDTH-30, 50)];
+        _hxScrollView =_scrollView.hxCollectionView;
+        _hxScrollView.delegate = self;
+        _minX = 0;
+        _defaultOffset = @"10000";
+        [self.view addSubview:_scrollView];
+    }
     return _scrollView;
 }
 
@@ -72,7 +72,6 @@
     
     NSDecimalNumber * moneyStr = nil;
     
-        
     float number = scrollView.contentOffset.x;
     number = number/10.0f;
     CGFloat money = number * 100 + _minX;

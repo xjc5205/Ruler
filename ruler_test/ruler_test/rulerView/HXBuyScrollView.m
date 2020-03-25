@@ -26,13 +26,12 @@
         sectionCount = 51;
         self.bounces = NO;
         self.showsHorizontalScrollIndicator = NO;
+        
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
         [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.itemSize = CGSizeMake(100, 50);
-        //layout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH/2.0 - 50, 50);
-        //layout.footerReferenceSize = CGSizeMake(SCREEN_WIDTH/2.0f, 50);
         layout.headerReferenceSize = CGSizeMake((SCREEN_WIDTH-30)/2.0 - 50, 50);
         layout.footerReferenceSize = CGSizeMake((SCREEN_WIDTH-30)/2.0f, 50);
         self.hxCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height) collectionViewLayout:layout];
@@ -43,7 +42,6 @@
         [self.hxCollectionView registerNib:[UINib nibWithNibName:@"HXCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HXCollectionReusableView"];
         [self.hxCollectionView registerNib:[UINib nibWithNibName:@"HXCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"HXCollectionReusableView"];
         self.hxCollectionView.bounces = NO;
-        //hxCollectionView.contentOffset = CGPointMake(SCREEN_WIDTH/2.0f, 0);
         [self addSubview:self.hxCollectionView];
     }
     return self;
