@@ -48,9 +48,15 @@
     _inputTextField.textAlignment = NSTextAlignmentCenter;
     _inputTextField.textColor = [UIColor colorWithHex:0xff8f10];
     _inputTextField.font = [UIFont systemFontOfSize:21];
+    _inputTextField.keyboardType = UIKeyboardTypeNumberPad;
     [self.view addSubview:_inputTextField];
     self.inputTextField.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    
+    UIImageView * lineView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 190, 1)];
+    lineView.center = CGPointMake(_inputTextField.center.x, _inputTextField.center.y + 22);
+    lineView.image = [UIImage imageNamed:@"point"];
+    [self.view addSubview:lineView];
 }
 
 -(HXBuyScrollView *)scrollView{
@@ -131,6 +137,11 @@
         _hxScrollView.contentOffset = CGPointMake(([tF.text floatValue] - _minX) / 100 * 10, 0);
         _inputTextField.text = textString;
     }
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:YES];
 }
 
 @end

@@ -1,9 +1,8 @@
 //
 //  HXBuyScrollView.h
-//  huaxiafiinance_huaxing_app
 //
-//  Created by huaxiafinance on 16/9/30.
-//  Copyright © 2016年 huaxiafinance. All rights reserved.
+//  Created by xjc on 16/9/30.
+//  Copyright © 2016年 xjc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

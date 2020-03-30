@@ -23,6 +23,8 @@
 		B8C40E7A2429D5E2004A0A70 /* HXCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C40E732429D5E2004A0A70 /* HXCollectionViewCell.xib */; };
 		B8C40E7B2429D5E2004A0A70 /* HXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C40E742429D5E2004A0A70 /* HXCollectionViewCell.m */; };
 		B8C40E7E2429DAE8004A0A70 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C40E7D2429DAE8004A0A70 /* UIColor+Extensions.m */; };
+		B8FE03372431CC2F0047303E /* point@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE03352431CC2F0047303E /* point@3x.png */; };
+		B8FE03382431CC2F0047303E /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FE03362431CC2F0047303E /* point@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		B8C40E742429D5E2004A0A70 /* HXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCollectionViewCell.m; sourceTree = "<group>"; };
 		B8C40E7C2429DAE8004A0A70 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		B8C40E7D2429DAE8004A0A70 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		B8FE03352431CC2F0047303E /* point@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point@3x.png"; sourceTree = "<group>"; };
+		B8FE03362431CC2F0047303E /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 				B8C40E702429D5E2004A0A70 /* HXCollPreCell.xib */,
 				B8C40E7C2429DAE8004A0A70 /* UIColor+Extensions.h */,
 				B8C40E7D2429DAE8004A0A70 /* UIColor+Extensions.m */,
+				B8FE03362431CC2F0047303E /* point@2x.png */,
+				B8FE03352431CC2F0047303E /* point@3x.png */,
 			);
 			path = rulerView;
 			sourceTree = "<group>";
@@ -280,8 +286,10 @@
 				B8C40E7A2429D5E2004A0A70 /* HXCollectionViewCell.xib in Resources */,
 				B8C40E412429BA4B004A0A70 /* LaunchScreen.storyboard in Resources */,
 				B8C40E3E2429BA4B004A0A70 /* Assets.xcassets in Resources */,
+				B8FE03382431CC2F0047303E /* point@2x.png in Resources */,
 				B8C40E3C2429BA4A004A0A70 /* Main.storyboard in Resources */,
 				B8C40E772429D5E2004A0A70 /* HXCollectionReusableView.xib in Resources */,
+				B8FE03372431CC2F0047303E /* point@3x.png in Resources */,
 				B8C40E792429D5E2004A0A70 /* HXCollPreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

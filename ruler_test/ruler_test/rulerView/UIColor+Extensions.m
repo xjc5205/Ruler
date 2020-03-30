@@ -1,9 +1,8 @@
 //
 //  UIColor+Extensions.m
-//  LXCircleAnimationView
 //
-//  Created by Leexin on 15/12/18.
-//  Copyright © 2015年 Garden.Lee. All rights reserved.
+//  Created by xjc on 15/12/18.
+//  Copyright © 2015年 xjc. All rights reserved.
 //
 
 #import "UIColor+Extensions.h"
